@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+
+<head>
+    <title>bookフォルダー</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <h2>bookフォルダー</h2>
+
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                    <tr class="table-tr">
+                        <th>本のタイトル</th>
+                        <th>本の感想</th>
+                        <th>作成日</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    {% for obj in object_list %}
+
+                    <tr class="table-td">
+                        <td>
+                            <a href="{% url 'blog:detail' obj.pk %}">
+
+                                {{ obj.title}}
+                            </a>
+                        </td>
+
+                        <td>
+                            {{ obj.text}}
+                        </td>
+                        <td>
+                            {{ obj.date}}
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
+
+            <div class="pagination">
+                <span class="step-links">
+
+                    {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; 最初へ</a>
+                    {% for prev_obj in prev %}
+                    <a href="?page={{ prev_obj }}">{{ prev_obj }}</a>
+                    {% endfor %}
+
+
+                    {% endif %}
+
+                    <span class="current-page">{{ page_obj.number }}</span>
+
+                    {% if page_obj.has_next %}
+                    {% for next_obj in next %}
+                    <a href="?page={{ next_obj }}">{{ next_obj }}</a>
+                    {% endfor %}
+
+                    <a href="?page={{ page_obj.paginator.num_pages }}">最後へ &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+            <div class="btn post">
+                <a href="{% url 'blog:post' %}">本を投稿する</a>
+
+            </div>
+
+        </div>
+
+    </main>
+</body>
+
+</html>

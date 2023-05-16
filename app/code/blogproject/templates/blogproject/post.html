@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>post画面</title>
+</head>
+
+<body>
+
+    <h1>postページ</h1>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">送信</button>
+    </form>
+
+    <a href="{% url 'blog:top' %}">book一覧に戻る</a>
+</body>
+
+</html>

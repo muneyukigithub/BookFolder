@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>削除画面</title>
+</head>
+
+<body>
+    <h1>削除ページ</h1>
+    <form method="post">
+        {{ object.title}}
+        {{ post.text | linebreaksbr}}
+        <p>こちらを削除します。</p>
+        <button type="submit">削除する</button>
+        {% csrf_token %}
+    </form>
+
+</body>
+
+</html>

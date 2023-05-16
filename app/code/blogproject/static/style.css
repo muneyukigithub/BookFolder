@@ -1,0 +1,144 @@
+/* body {
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+}
+
+main {
+    margin: 10px;
+}
+
+/* テーブル全体のスタイル */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 見出し行のスタイル */
+.table thead tr {
+    background-color: #f2f2f2;
+}
+
+/* データ行のスタイル */
+.table tbody tr {
+    background-color: #ffffff;
+}
+
+/* データ行のスタイル */
+.table tbody td {
+    text-align: center;
+    background-color: #ffffff;
+    max-width: 200px;
+    /* 最大幅を指定 */
+    white-space: nowrap;
+    /* テキストの折り返しを禁止 */
+    overflow: hidden;
+    /* オーバーフローを非表示 */
+    text-overflow: ellipsis;
+    /* オーバーフロー時に省略記号(...)を表示 */
+}
+
+
+/* データ行の奇数行のスタイル */
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* データ行のホバー時のスタイル */
+.table tbody tr:hover {
+    background-color: #eaeaea;
+}
+
+/* リンクのスタイル */
+.table a {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* リンクのホバー時のスタイル */
+.table a:hover {
+    color: darkblue;
+}
+
+
+.table-wrapper {
+
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+}
+
+.table {
+    font-size: large;
+    /* text-align: center; */
+    /* border: 1px black solid; */
+}
+
+.table-tr {
+    border: 1px black solid;
+}
+
+.table-td {
+    border: 1px black solid;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 8px 12px;
+    margin: 0 4px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    background-color: #f5f5f5;
+}
+
+.pagination .current-page {
+    font-weight: bold;
+}
+
+/* .step-links {
+    background-color: lightblue;
+    border-radius: 8px;
+    padding: 10px;
+    border: 0.5px black solid;
+} */
+
+/* .btn.post {
+    margin-top: 20px;
+    text-align: end;
+} */
+
+.btn.post {
+    display: block;
+    margin: 10px 0;
+    /*     
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content; */
+}
+
+.btn.post a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn.post a:hover {
+    background-color: #23527c;
+}

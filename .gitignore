@@ -1,5 +1,4 @@
 db/
 app/code/venv/
 ./code/
-
 __pycache__
